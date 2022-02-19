@@ -10,3 +10,6 @@ echo "Value of operation in UC-3 is: " $uc3
 
 uc4=$(($c+$a/$b))
 echo "Value of operation in UC-4 is: " $uc4
+
+uc5=$(($a%$b+$c))
+echo "Value of operation in UC-5 is: " $uc5
