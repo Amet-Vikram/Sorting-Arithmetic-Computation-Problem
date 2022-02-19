@@ -1,15 +1,14 @@
 #!/bin/bash 
 
 read -p "Enter the values of A B C: " a b c
+declare -A values
 
-uc2=$(($a+$b*$c))
-echo "Value of operation in UC-2 is: " $uc2
+values[0]=$(($a+$b*$c))
 
-uc3=$(($a*$b+$c))
-echo "Value of operation in UC-3 is: " $uc3
+values[1]=$(($a*$b+$c))
 
-uc4=$(($c+$a/$b))
-echo "Value of operation in UC-4 is: " $uc4
+values[2]=$(($c+$a/$b))
 
-uc5=$(($a%$b+$c))
-echo "Value of operation in UC-5 is: " $uc5
+values[3]=$(($a%$b+$c))
+
+echo ${values[@]}
