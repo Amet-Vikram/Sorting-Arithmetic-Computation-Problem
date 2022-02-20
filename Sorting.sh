@@ -29,5 +29,18 @@ do
 		fi
 	done
 done
+echo "Array After the sorting in Descending Order: "${arr[@]}
+for ((i=0;i<4;i++))
+do 
+	for ((j=0;j<4-i-1;j++))
+	do
+		if [ ${arr[$j]} -ge ${arr[$j+1]} ] 
+		then 
+			temp=${arr[$j]}
+			arr[$j]=${arr[$j+1]}
+			arr[$j+1]=$temp
+		fi
+	done
+done
 
-echo "Array After the sorting (Descending Order): "${arr[@]}
+echo "Array After sorting in Ascending Order: "${arr[@]}
